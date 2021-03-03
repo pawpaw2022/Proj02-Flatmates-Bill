@@ -1,3 +1,3 @@
 # Proj02-Flatmates-Bill
 ## App 02: Flatemates' Bill Generator
-A app that generates a pdf split bill of 2 flatmates according to their days spent in the apartment. 
+Given the user's and his/her flatmates' flat bill as well as their names, the period of the bill and the days they spent during that period. The app will split the bill evenly and tell them how much each of they should pay. More over, it will generate a PDF file stating the information. 
