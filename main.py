@@ -2,14 +2,32 @@ from flat import Bill, Flatmate
 from reports import PdfReport, FileSharer
 
 # building User Interface
-amount = float(input('Hey user, please enter the bill amount: '))
+while True:
+    try:
+        amount = float(input('Hey user, please enter the bill amount: '))
+        break
+    except(ValueError):
+        print('Invalid bill amount input, please enter a number')
+
 period = input('What month is the bill period ? E.g. December 2020 : ')
 
 name1 = input("What is the first flatmate's name ? ")
-days_in_house_1 = int(input(f'How many days did {name1} stay during that period ? '))
+while True:
+    try:
+        days_in_house_1 = int(input(f'How many days did {name1} stay during that period ? '))
+        break
+    except(ValueError):
+        print('Invalid days input, please enter a number')
+
 
 name2 = input("What is the second flatmate's name ? ")
-days_in_house_2 = int(input(f'How many days did {name2} stay during that period ? '))
+while True:
+    try:
+        days_in_house_2 = int(input(f'How many days did {name2} stay during that period ? '))
+        break
+    except(ValueError):
+        print('Invalid days input, please enter a number')
+
 
 the_bill = Bill(amount=amount, period=period)
 mate1 = Flatmate(name=name1, days_in_house=days_in_house_1)
